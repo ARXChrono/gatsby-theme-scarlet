@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import {
   StyledProjectItem,
   ProjectLink,
@@ -9,14 +9,9 @@ import {
 } from "./styles"
 
 const ProjectItem = ({ link, image, alt, name, badge }) => {
-  const [active, setActive] = useState(false)
-  const handleClick = e => {
-    e.preventDefault()
-    setActive(!active)
-  }
   return (
-    <StyledProjectItem active={active}>
-      <ProjectLink href={link} onClick={handleClick}>
+    <StyledProjectItem>
+      <ProjectLink href={link}>
         <ProjectImage src={image} alt={alt} />
         <ProjectContent>
           <ProjectTitle>{name}</ProjectTitle>

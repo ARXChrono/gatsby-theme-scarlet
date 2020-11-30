@@ -8,6 +8,7 @@
     "start": "yarn workspace gatsby-theme-scarlet-demo start",
     "build": "yarn workspace gatsby-theme-scarlet-demo build",
     "serve": "yarn workspace gatsby-theme-scarlet-demo serve",
-    "clean": "yarn workspace gatsby-theme-scarlet-demo clean"
+    "clean": "yarn workspace gatsby-theme-scarlet-demo clean",
+    "lint": "eslint --ext .js --ext .jsx ./ --max-warnings=0 --fix"
   }
 }

@@ -1,6 +1,12 @@
-import styled from "@emotion/styled"
-import { keyframes, css } from "@emotion/core"
-import theme from "../gatsby-plugin-theme-ui"
+import styled, { keyframes, css } from 'styled-components'
+import theme from "../theme"
+
+export const Container = styled.div`
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  overflow: hidden;
+`
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -57,19 +63,19 @@ export const StyledHero = styled.section`
   height: 100vh;
 `
 
-export const waveAnimation = length => css`
+export const waveAnimation = (length) => css`
   animation: ${wave} ${length} linear infinite alternate;
 `
 
-export const dashAnimation = length => css`
+export const dashAnimation = (length) => css`
   animation: ${dash} ${length} linear forwards;
 `
 
-export const zoomAnimation = length => css`
+export const zoomAnimation = (length) => css`
   animation: ${zoom} ${length} linear infinite;
 `
 
-export const moveAnimation = length => css`
+export const moveAnimation = (length) => css`
   animation: ${move} ${length} linear infinite;
 `
 
@@ -188,6 +194,8 @@ export const ProjectList = styled.ul`
   @media only screen and (min-width: ${theme.breakpoints[1]}) {
     overflow: unset;
     flex-wrap: wrap;
+    max-width: 960px;
+    justify-content: center;
   }
 `
 
@@ -200,15 +208,15 @@ export const StyledProjectItem = styled.li`
   margin: 1rem 1.5rem 0rem 0rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: transform 0.27s ease;
+  &:focus-within {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
   @media only screen and (min-width: ${theme.breakpoints[1]}) {
     flex: 1 1 45%;
     max-width: 45%;
-  }
-  &:hover {
-    transform: scale(1.025);
-  }
-  &:focus-within {
-    outline: -webkit-focus-ring-color auto 5px;
+    &:hover {
+      transform: scale(1.025);
+    }
   }
 `
 

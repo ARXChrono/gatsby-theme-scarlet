@@ -1,6 +1,5 @@
 import React from "react"
-import { Container } from "theme-ui"
-import { StyledFooter, FooterBox, HyperLink } from "./styles"
+import { StyledFooter, FooterBox, HyperLink, Container } from "./styles"
 
 const Footer = () => {
   return (

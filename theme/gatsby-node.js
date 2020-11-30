@@ -5,6 +5,8 @@ exports.createPages = ({ actions }) => {
   actions.createPage({
     path: "/",
     component: HomepageTemplate,
-    context: {},
+    context: {
+      hello: "hi"
+    },
   })
 }

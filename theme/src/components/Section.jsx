@@ -1,6 +1,5 @@
 import React from "react"
-import { Container } from "theme-ui"
-import { StyledSection } from "./styles"
+import { StyledSection, Container } from "./styles"
 import { AnimatedWave } from "./"
 
 const Section = ({
